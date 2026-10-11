@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DataView – Zásady ochrany soukromí / Privacy Policy</title>
+  <meta name="description" content="Zásady ochrany soukromí aplikace DataView pro Android / Privacy policy of the DataView Android app.">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #1c1b1f;
+      --muted: #5f5b66;
+      --accent: #2a5db0;
+      --card: #f4f5f9;
+      --border: #dcdde4;
+      --warn-bg: #fff4c2;
+      --warn-fg: #5a4600;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14151a;
+        --fg: #e6e4ea;
+        --muted: #a9a6b2;
+        --accent: #8cb4ff;
+        --card: #1e2027;
+        --border: #34363f;
+        --warn-bg: #4a3d00;
+        --warn-fg: #ffe9a0;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    main { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+    h1 { font-size: 1.8rem; margin: 0 0 4px; }
+    h2 { font-size: 1.25rem; margin: 2rem 0 .5rem; border-bottom: 1px solid var(--border); padding-bottom: 4px; }
+    p, li { color: var(--fg); }
+    ul { padding-left: 1.2rem; }
+    li { margin: .25rem 0; }
+    a { color: var(--accent); }
+    .meta { color: var(--muted); font-size: .9rem; margin-bottom: 1rem; }
+    .lang { display: flex; gap: 8px; margin: 12px 0 8px; }
+    .lang button {
+      font: inherit; padding: 6px 14px; border-radius: 999px; cursor: pointer;
+      border: 1px solid var(--border); background: var(--card); color: var(--fg);
+    }
+    .lang button[aria-pressed="true"] { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+    .box { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px; margin: 1rem 0; }
+    table { width: 100%; border-collapse: collapse; margin: .75rem 0; font-size: .95rem; }
+    th, td { text-align: left; vertical-align: top; padding: 8px; border-bottom: 1px solid var(--border); }
+    th { color: var(--muted); font-weight: 600; }
+    .todo { background: var(--warn-bg); color: var(--warn-fg); padding: 0 4px; border-radius: 4px; }
+    body { overflow-wrap: anywhere; }
+    /* Na úzkém displeji se řádky tabulky skládají pod sebe, ať nepřetéká. */
+    @media (max-width: 600px) {
+      table, tbody, tr, th, td { display: block; width: 100%; }
+      th { border-bottom: 0; padding-bottom: 0; }
+      td { padding-top: 2px; }
+    }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+<main>
+
+  <div class="lang" role="group" aria-label="Language / Jazyk">
+    <button type="button" id="btn-cs" aria-pressed="true">Čeština</button>
+    <button type="button" id="btn-en" aria-pressed="false">English</button>
+  </div>
+
+  <!-- ===================== ČESKY ===================== -->
+  <section id="cs" lang="cs">
+    <h1>Zásady ochrany soukromí – DataView</h1>
+    <p class="meta">Platné od 11. 10. 2026 · Aplikace DataView pro Android (ID balíčku <code>cz.palla.dataview</code>)</p>
+
+    <p>
+      DataView je aplikace pro zobrazování a ukládání časových dat (měření) ze služeb, které si
+      uživatel sám nastaví, např. ThingSpeak, dalších REST serverů nebo MQTT brokerů.
+      Tyto zásady vysvětlují, jaké údaje aplikace zpracovává, proč a jaká máte práva.
+    </p>
+
+    <div class="box">
+      <strong>Stručně:</strong> vaše měření, nastavení zdrojů ani přístupové klíče
+      <strong>neodesíláme na žádný náš server</strong> – žádný nemáme. Zůstávají ve vašem zařízení
+      a komunikují jen se servery, které si sami zadáte. Anonymní statistiky a hlášení chyb
+      (Firebase) se odesílají <strong>jen s vaším souhlasem</strong>. Aplikace zobrazuje reklamy
+      (Google AdMob) a nabízí jednorázový nákup PRO verze přes Google Play.
+    </div>
+
+    <h2>1. Správce údajů a kontakt</h2>
+    <p>
+      Správce: <span class="todo">Martin Palla</span><br>
+      Kontakt: <a href="mailto:pallamartas@seznam.cz">pallamartas@seznam.cz</a>
+    </p>
+
+    <h2>2. Údaje uložené jen ve vašem zařízení</h2>
+    <p>Tyto údaje aplikace ukládá lokálně v zařízení a nikam je neodesílá provozovateli:</p>
+    <ul>
+      <li>stažená měření a historie hodnot, poznámky a události,</li>
+      <li>nastavení zdrojů dat, zařízení a veličin, přehledy a widgety, nastavení aplikace (jazyk, vzhled apod.),</li>
+      <li>API klíče a přihlašovací údaje ke zdrojům dat – ukládají se do zabezpečeného úložiště systému Android,</li>
+      <li>stav PRO verze (zda byl nákup dokončen) a pomocné počítadlo používání pro zobrazování reklam.</li>
+    </ul>
+    <p>
+      Odinstalováním aplikace nebo vymazáním jejích dat v systému Android se tyto údaje odstraní.
+      Stará měření lze také automaticky mazat v Nastavení aplikace.
+    </p>
+
+    <h2>3. Komunikace se zdroji dat, které si nastavíte</h2>
+    <p>
+      Aplikace se připojuje přímo ze zařízení k serverům, které zadáte (např. ThingSpeak,
+      vlastní REST API, MQTT broker). Tam se odesílají vámi zadané požadavky, případně API klíč nebo
+      přihlašovací údaje. Tyto služby mají vlastní zásady ochrany soukromí a provozovatel aplikace
+      nemá k této komunikaci ani k jejím datům přístup.
+    </p>
+
+    <h2>4. Oznámení a kontrola alarmů na pozadí</h2>
+    <p>
+      Oznámení o alarmech vytváří aplikace lokálně v zařízení. Volitelná kontrola alarmů na pozadí
+      (když ji zapnete) pravidelně stahuje data z vašich zdrojů – opět jen mezi zařízením a vámi
+      zadanými servery. Oprávnění k oznámením (Android 13+) je dobrovolné.
+    </p>
+
+    <h2>5. Anonymní statistiky a hlášení chyb (Firebase) – jen se souhlasem</h2>
+    <p>
+      Pokud při prvním spuštění (nebo později v Nastavení → Soukromí a statistiky) souhlasíte,
+      aplikace používá služby <strong>Firebase Analytics</strong> a <strong>Firebase Crashlytics</strong>
+      společnosti Google. Bez souhlasu se nic neodesílá. Souhlas můžete kdykoli odvolat vypnutím
+      přepínače v Nastavení; odvolání nemá vliv na zákonnost zpracování před odvoláním.
+    </p>
+    <table>
+      <tr><th>Co se zpracovává</th><td>Událost „spuštění / doba používání aplikace“, typy a počty widgetů, které máte na přehledech, přidání widgetu (typ), otevření detailu veličiny, dokončení reklamní brány, dokončení nákupu PRO.</td></tr>
+      <tr><th>Technické údaje</th><td>Anonymní identifikátor instalace aplikace (Firebase App Instance ID), model zařízení, verze Androidu a aplikace, jazyk, přibližná lokalita (země/region) odvozená Googlem z IP adresy (samotná IP adresa se neukládá), u pádů záznam o chybě (výpis zásobníku volání).</td></tr>
+      <tr><th>Co se NEODESÍLÁ</th><td>Naměřená data, názvy zdrojů a veličin, API klíče, přihlašovací údaje, e-mail, jméno ani přesná poloha.</td></tr>
+      <tr><th>Účel</th><td>Zjistit, které funkce se používají a jak dlouho, a opravovat chyby a pády.</td></tr>
+      <tr><th>Právní základ</th><td>Váš souhlas (čl. 6 odst. 1 písm. a) GDPR).</td></tr>
+      <tr><th>Doba uchování</th><td>Podle nastavení ve Firebase, nejdéle 14 měsíců.</td></tr>
+      <tr><th>Zpracovatel</th><td>Google Ireland Limited / Google LLC. Údaje mohou být předávány i mimo EHP na základě standardních smluvních doložek (viz <a href="https://firebase.google.com/support/privacy" rel="noopener">firebase.google.com/support/privacy</a>).</td></tr>
+    </table>
+
+    <h2>6. Reklamy (Google AdMob)</h2>
+    <p>
+      Bezplatná verze aplikace zobrazuje odměněné reklamy společnosti Google (AdMob), které
+      po vyčerpání volného času používání umožní pokračovat. AdMob může zpracovávat
+      <strong>reklamní identifikátor zařízení</strong>, IP adresu, údaje o zařízení a interakci s reklamou
+      a používat je k zobrazení a měření reklam. Pro uživatele v EHP a ve Spojeném království
+      se při prvním spuštění zobrazí formulář souhlasu (Google UMP) a reklamy se řídí vaší volbou.
+      Reklamní identifikátor můžete v Androidu resetovat nebo smazat v Nastavení → Google → Reklamy.
+      Více: <a href="https://policies.google.com/technologies/ads" rel="noopener">policies.google.com/technologies/ads</a>.
+      PRO verze reklamy nezobrazuje.
+    </p>
+
+    <h2>7. Nákup PRO verze (Google Play)</h2>
+    <p>
+      Jednorázový nákup PRO verze probíhá výhradně přes Google Play. Platební údaje zpracovává
+      Google, provozovatel je nevidí ani neukládá. Aplikace si lokálně uloží jen informaci,
+      že byl nákup dokončen, a při obnovení nákupu ji ověří přes Google Play.
+    </p>
+
+    <h2>8. Oprávnění aplikace</h2>
+    <ul>
+      <li><strong>Internet</strong> – stahování dat ze zdrojů, reklamy, nákup, statistiky.</li>
+      <li><strong>Oznámení</strong> – alarmy (dobrovolné, vyžádá se až při použití).</li>
+      <li><strong>Reklamní ID</strong> – reklamy (AdMob), lze vypnout v nastavení Androidu.</li>
+      <li><strong>Fakturace Google Play</strong> – nákup PRO verze.</li>
+    </ul>
+    <p>Aplikace nežádá o přístup k poloze, kontaktům, kameře, mikrofonu ani souborům.</p>
+
+    <h2>9. Vaše práva</h2>
+    <p>
+      Podle GDPR máte právo na přístup k údajům, jejich opravu, výmaz, omezení zpracování,
+      přenositelnost a vznést námitku, a odvolat souhlas. Protože jsou vaše data uložena
+      ve vašem zařízení, většinu práv uplatníte přímo v aplikaci nebo jejím odinstalováním.
+      K údajům ve Firebase, které nelze přiřadit ke konkrétní osobě, nám můžete napsat na e-mail výše.
+      Máte také právo podat stížnost u dozorového úřadu – v České republice u
+      <a href="https://www.uoou.gov.cz" rel="noopener">Úřadu pro ochranu osobních údajů</a>.
+    </p>
+
+    <h2>10. Děti</h2>
+    <p>Aplikace není určena dětem a nezjišťujeme záměrně údaje od dětí.</p>
+
+    <h2>11. Změny zásad</h2>
+    <p>
+      Zásady můžeme aktualizovat, např. při přidání nové funkce. Aktuální verze je vždy na této stránce
+      s datem platnosti nahoře. Podstatné změny, které vyžadují váš souhlas, vás vyzveme potvrdit
+      přímo v aplikaci.
+    </p>
+  </section>
+
+  <!-- ===================== ENGLISH ===================== -->
+  <section id="en" lang="en">
+    <h1>Privacy Policy – DataView</h1>
+    <p class="meta">Effective 11 October 2026 · DataView Android app (package ID <code>cz.palla.dataview</code>)</p>
+
+    <p>
+      DataView is an app for viewing and storing time-series data (measurements) from services that
+      you configure yourself, such as ThingSpeak, other REST servers or MQTT brokers.
+      This policy explains what data the app processes, why, and what rights you have.
+    </p>
+
+    <div class="box">
+      <strong>In short:</strong> your measurements, data source settings and access keys are
+      <strong>not sent to any server of ours</strong> – we do not operate one. They stay on your device
+      and only communicate with the servers you enter yourself. Anonymous statistics and crash reports
+      (Firebase) are sent <strong>only with your consent</strong>. The app shows ads (Google AdMob)
+      and offers a one-time PRO purchase through Google Play.
+    </div>
+
+    <h2>1. Controller and contact</h2>
+    <p>
+      Controller: <span class="todo">Martin Palla</span><br>
+      Contact: <a href="mailto:pallamartas@seznam.cz">pallamartas@seznam.cz</a>
+    </p>
+
+    <h2>2. Data stored only on your device</h2>
+    <p>The app stores the following locally on your device and does not send it to the developer:</p>
+    <ul>
+      <li>downloaded measurements and value history, notes and events,</li>
+      <li>data source, device and field settings, dashboards and widgets, app settings (language, theme, etc.),</li>
+      <li>API keys and credentials for your data sources – kept in Android's secure storage,</li>
+      <li>PRO status (whether the purchase was completed) and a usage counter used for showing ads.</li>
+    </ul>
+    <p>
+      Uninstalling the app or clearing its data in Android removes this data.
+      Old measurements can also be deleted automatically in the app's Settings.
+    </p>
+
+    <h2>3. Communication with the data sources you configure</h2>
+    <p>
+      The app connects directly from your device to the servers you enter (e.g. ThingSpeak, your own
+      REST API, an MQTT broker). Requests you configure, and where applicable an API key or credentials,
+      are sent there. These services have their own privacy policies, and the developer has no access
+      to this communication or its data.
+    </p>
+
+    <h2>4. Notifications and background alarm checks</h2>
+    <p>
+      Alarm notifications are generated locally on your device. The optional background alarm check
+      (when you turn it on) periodically downloads data from your sources – again only between your device
+      and the servers you entered. The notification permission (Android 13+) is optional.
+    </p>
+
+    <h2>5. Anonymous statistics and crash reports (Firebase) – consent only</h2>
+    <p>
+      If you agree at first launch (or later in Settings → Privacy and statistics), the app uses
+      <strong>Firebase Analytics</strong> and <strong>Firebase Crashlytics</strong> by Google.
+      Nothing is sent without your consent. You can withdraw it at any time by turning off the switch in
+      Settings; withdrawal does not affect the lawfulness of processing before withdrawal.
+    </p>
+    <table>
+      <tr><th>What is processed</th><td>App launch / usage-time events, types and counts of widgets on your dashboards, widget added (type), measurement detail opened, ad gate completed, PRO purchase completed.</td></tr>
+      <tr><th>Technical data</th><td>Anonymous app-installation identifier (Firebase App Instance ID), device model, Android and app version, language, approximate location (country/region) derived by Google from the IP address (the IP address itself is not stored); for crashes, an error report (stack trace).</td></tr>
+      <tr><th>What is NOT sent</th><td>Measured data, names of sources and fields, API keys, credentials, e-mail, name or precise location.</td></tr>
+      <tr><th>Purpose</th><td>To understand which features are used and for how long, and to fix bugs and crashes.</td></tr>
+      <tr><th>Legal basis</th><td>Your consent (Art. 6(1)(a) GDPR).</td></tr>
+      <tr><th>Retention</th><td>As configured in Firebase, at most 14 months.</td></tr>
+      <tr><th>Processor</th><td>Google Ireland Limited / Google LLC. Data may be transferred outside the EEA under standard contractual clauses (see <a href="https://firebase.google.com/support/privacy" rel="noopener">firebase.google.com/support/privacy</a>).</td></tr>
+    </table>
+
+    <h2>6. Ads (Google AdMob)</h2>
+    <p>
+      The free version of the app shows rewarded ads by Google (AdMob) that let you continue after your
+      free usage time is used up. AdMob may process the <strong>advertising ID</strong>, IP address,
+      device information and ad interaction to serve and measure ads. For users in the EEA and the
+      United Kingdom, a consent form (Google UMP) is shown at first launch and ads follow your choice.
+      You can reset or delete the advertising ID in Android under Settings → Google → Ads.
+      More: <a href="https://policies.google.com/technologies/ads" rel="noopener">policies.google.com/technologies/ads</a>.
+      The PRO version shows no ads.
+    </p>
+
+    <h2>7. PRO purchase (Google Play)</h2>
+    <p>
+      The one-time PRO purchase is handled exclusively through Google Play. Payment details are processed
+      by Google; the developer neither sees nor stores them. The app only stores locally that the purchase
+      was completed and verifies it through Google Play when restoring purchases.
+    </p>
+
+    <h2>8. App permissions</h2>
+    <ul>
+      <li><strong>Internet</strong> – downloading data from sources, ads, purchase, statistics.</li>
+      <li><strong>Notifications</strong> – alarms (optional, requested only when used).</li>
+      <li><strong>Advertising ID</strong> – ads (AdMob); can be turned off in Android settings.</li>
+      <li><strong>Google Play Billing</strong> – the PRO purchase.</li>
+    </ul>
+    <p>The app does not request access to location, contacts, camera, microphone or files.</p>
+
+    <h2>9. Your rights</h2>
+    <p>
+      Under the GDPR you have the right of access, rectification, erasure, restriction of processing,
+      data portability, to object, and to withdraw consent. Because your data is stored on your device,
+      you can exercise most rights directly in the app or by uninstalling it. For Firebase data that
+      cannot be linked to a specific person you can write to the e-mail above. You also have the right to
+      lodge a complaint with a supervisory authority – in the Czech Republic the
+      <a href="https://www.uoou.gov.cz" rel="noopener">Office for Personal Data Protection</a>.
+    </p>
+
+    <h2>10. Children</h2>
+    <p>The app is not intended for children and we do not knowingly collect data from children.</p>
+
+    <h2>11. Changes to this policy</h2>
+    <p>
+      We may update this policy, e.g. when adding a new feature. The current version is always on this page
+      with its effective date at the top. Where a change requires your consent, we will ask you to confirm
+      it in the app.
+    </p>
+  </section>
+
+</main>
+
+<script>
+  // Přepínání jazyka (bez knihoven). Bez JavaScriptu jsou obě verze viditelné
+  // pod sebou. Výchozí jazyk podle prohlížeče: čeština/slovenština = česky,
+  // jinak anglicky. Odkaz s #en nebo #cs vynutí konkrétní jazyk.
+  (function () {
+    var cs = document.getElementById('cs');
+    var en = document.getElementById('en');
+    var bCs = document.getElementById('btn-cs');
+    var bEn = document.getElementById('btn-en');
+
+    function show(lang) {
+      var isCs = lang === 'cs';
+      cs.hidden = !isCs;
+      en.hidden = isCs;
+      bCs.setAttribute('aria-pressed', String(isCs));
+      bEn.setAttribute('aria-pressed', String(!isCs));
+      document.documentElement.lang = isCs ? 'cs' : 'en';
+    }
+
+    bCs.addEventListener('click', function () { show('cs'); });
+    bEn.addEventListener('click', function () { show('en'); });
+
+    var hash = (location.hash || '').replace('#', '');
+    if (hash === 'en' || hash === 'cs') {
+      show(hash);
+    } else {
+      var nav = (navigator.language || 'cs').toLowerCase();
+      show(nav.indexOf('cs') === 0 || nav.indexOf('sk') === 0 ? 'cs' : 'en');
+    }
+  })();
+</script>
+</body>
+</html>
