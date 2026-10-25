@@ -75,7 +75,7 @@
   <!-- ===================== ČESKY ===================== -->
   <section id="cs" lang="cs">
     <h1>Zásady ochrany soukromí – DataView</h1>
-    <p class="meta">Platné od 11. 10. 2026 · Aplikace DataView pro Android (ID balíčku <code>cz.palla.dataview</code>)</p>
+    <p class="meta">Platné od 25. 10. 2026 · Aplikace DataView pro Android (ID balíčku <code>cz.palla.dataview</code>)</p>
 
     <p>
       DataView je aplikace pro zobrazování a ukládání časových dat (měření) ze služeb, které si
@@ -117,6 +117,11 @@
       přihlašovací údaje. Tyto služby mají vlastní zásady ochrany soukromí a provozovatel aplikace
       nemá k této komunikaci ani k jejím datům přístup.
     </p>
+    <p>
+      Doporučujeme zadávat adresy se šifrovaným spojením (HTTPS, u MQTT TLS), pokud je váš server
+      podporuje. Zda je spojení šifrované, závisí na adrese a nastavení serveru, který si zvolíte;
+      u nešifrovaného spojení (HTTP) mohou být přenášené údaje včetně API klíče zachyceny na síti.
+    </p>
 
     <h2>4. Oznámení a kontrola alarmů na pozadí</h2>
     <p>
@@ -147,11 +152,20 @@
       Bezplatná verze aplikace zobrazuje odměněné reklamy společnosti Google (AdMob), které
       po vyčerpání volného času používání umožní pokračovat. AdMob může zpracovávat
       <strong>reklamní identifikátor zařízení</strong>, IP adresu, údaje o zařízení a interakci s reklamou
-      a používat je k zobrazení a měření reklam. Pro uživatele v EHP a ve Spojeném království
+      a používat je k zobrazení a měření reklam. Pro uživatele v EHP, ve Spojeném království a ve Švýcarsku
       se při prvním spuštění zobrazí formulář souhlasu (Google UMP) a reklamy se řídí vaší volbou.
+      Svou volbu můžete kdykoli změnit nebo odvolat v aplikaci v Nastavení → Soukromí →
+      „Možnosti soukromí a reklam“.
       Reklamní identifikátor můžete v Androidu resetovat nebo smazat v Nastavení → Google → Reklamy.
       Více: <a href="https://policies.google.com/technologies/ads" rel="noopener">policies.google.com/technologies/ads</a>.
       PRO verze reklamy nezobrazuje.
+    </p>
+    <p>
+      <strong>Uživatelé v USA:</strong> pokud žijete ve státě USA, jehož zákon o ochraně soukromí to upravuje
+      (např. Kalifornie), můžete odmítnout prodej nebo sdílení svých osobních údajů pro personalizované
+      reklamy. Pokud se vás to týká, aplikace vám nabídne formulář s touto volbou a stejnou volbu
+      můžete změnit také v Nastavení → Soukromí → „Možnosti soukromí a reklam“. Po odmítnutí se vám zobrazují
+      reklamy bez personalizace.
     </p>
 
     <h2>7. Nákup PRO verze (Google Play)</h2>
@@ -179,6 +193,11 @@
       Máte také právo podat stížnost u dozorového úřadu – v České republice u
       <a href="https://www.uoou.gov.cz" rel="noopener">Úřadu pro ochranu osobních údajů</a>.
     </p>
+    <p>
+      Obyvatelé některých států USA mají podle tamních zákonů navíc právo vědět, jaké údaje se o nich
+      zpracovávají, požádat o jejich výmaz a odmítnout prodej či sdílení osobních údajů pro cílenou
+      reklamu (viz oddíl 6). Za uplatnění těchto práv vás nikdo nebude diskriminovat.
+    </p>
 
     <h2>10. Děti</h2>
     <p>Aplikace není určena dětem a nezjišťujeme záměrně údaje od dětí.</p>
@@ -194,7 +213,7 @@
   <!-- ===================== ENGLISH ===================== -->
   <section id="en" lang="en">
     <h1>Privacy Policy – DataView</h1>
-    <p class="meta">Effective 11 October 2026 · DataView Android app (package ID <code>cz.palla.dataview</code>)</p>
+    <p class="meta">Effective 25 October 2026 · DataView Android app (package ID <code>cz.palla.dataview</code>)</p>
 
     <p>
       DataView is an app for viewing and storing time-series data (measurements) from services that
@@ -212,7 +231,7 @@
 
     <h2>1. Controller and contact</h2>
     <p>
-      Controller: <span class="todo">Martin Palla</span><br>
+      Controller: <span class="todo">[FILL IN the operator's full name]</span><br>
       Contact: <a href="mailto:pallamartas@seznam.cz">pallamartas@seznam.cz</a>
     </p>
 
@@ -235,6 +254,12 @@
       REST API, an MQTT broker). Requests you configure, and where applicable an API key or credentials,
       are sent there. These services have their own privacy policies, and the developer has no access
       to this communication or its data.
+    </p>
+    <p>
+      We recommend entering addresses that use an encrypted connection (HTTPS, or TLS for MQTT) whenever
+      your server supports it. Whether a connection is encrypted depends on the address and the settings of
+      the server you choose; with an unencrypted connection (HTTP), transmitted data including an API key
+      may be intercepted on the network.
     </p>
 
     <h2>4. Notifications and background alarm checks</h2>
@@ -265,11 +290,20 @@
     <p>
       The free version of the app shows rewarded ads by Google (AdMob) that let you continue after your
       free usage time is used up. AdMob may process the <strong>advertising ID</strong>, IP address,
-      device information and ad interaction to serve and measure ads. For users in the EEA and the
-      United Kingdom, a consent form (Google UMP) is shown at first launch and ads follow your choice.
+      device information and ad interaction to serve and measure ads. For users in the EEA, the
+      United Kingdom and Switzerland, a consent form (Google UMP) is shown at first launch and ads follow
+      your choice. You can change or withdraw your choice at any time in the app under Settings → Privacy →
+      "Privacy and ad options".
       You can reset or delete the advertising ID in Android under Settings → Google → Ads.
       More: <a href="https://policies.google.com/technologies/ads" rel="noopener">policies.google.com/technologies/ads</a>.
       The PRO version shows no ads.
+    </p>
+    <p>
+      <strong>Users in the United States:</strong> if you live in a US state whose privacy law provides for it
+      (e.g. California), you can opt out of the sale or sharing of your personal information for
+      personalized advertising. Where this applies to you, the app offers a form with this choice, and you can
+      change it at any time under Settings → Privacy → "Privacy and ad options". After you opt out,
+      you are shown non-personalized ads.
     </p>
 
     <h2>7. PRO purchase (Google Play)</h2>
@@ -296,6 +330,12 @@
       cannot be linked to a specific person you can write to the e-mail above. You also have the right to
       lodge a complaint with a supervisory authority – in the Czech Republic the
       <a href="https://www.uoou.gov.cz" rel="noopener">Office for Personal Data Protection</a>.
+    </p>
+    <p>
+      Residents of certain US states additionally have the right under local laws to know what data is
+      processed about them, to request its deletion, and to opt out of the sale or sharing of personal
+      information for targeted advertising (see section 6). You will not be discriminated against for
+      exercising these rights.
     </p>
 
     <h2>10. Children</h2>
