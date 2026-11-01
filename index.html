@@ -37,6 +37,7 @@
     }
     main { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
     h1 { font-size: 1.8rem; margin: 0 0 4px; }
+    h3 { font-size: 1.05rem; margin: 1.25rem 0 .25rem; }
     h2 { font-size: 1.25rem; margin: 2rem 0 .5rem; border-bottom: 1px solid var(--border); padding-bottom: 4px; }
     p, li { color: var(--fg); }
     ul { padding-left: 1.2rem; }
@@ -75,18 +76,18 @@
   <!-- ===================== ČESKY ===================== -->
   <section id="cs" lang="cs">
     <h1>Zásady ochrany soukromí: DataView – Sensor Dashboard</h1>
-    <p class="meta">Platné od 27. 10. 2026 · Aplikace DataView – Sensor Dashboard pro Android (ID balíčku <code>cz.palla.dataview</code>)</p>
+    <p class="meta">Platné od 1. 11. 2026 · Aplikace DataView – Sensor Dashboard pro Android (ID balíčku <code>cz.palla.dataview</code>)</p>
 
     <p>
       DataView – Sensor Dashboard je aplikace pro zobrazování a ukládání časových dat (měření) ze služeb, které si
-      uživatel sám nastaví, např. ThingSpeak, dalších REST serverů nebo MQTT brokerů.
+      uživatel sám nastaví, např. ThingSpeak, dalších REST serverů nebo MQTT brokerů. Volitelně umí na tyto služby na váš pokyn také odesílat hodnoty (ovládací widgety).
       Tyto zásady vysvětlují, jaké údaje aplikace zpracovává, proč a jaká máte práva.
     </p>
 
     <div class="box">
       <strong>Stručně:</strong> vaše měření, nastavení zdrojů ani přístupové klíče
       <strong>neodesíláme na žádný náš server</strong> – žádný nemáme. Zůstávají ve vašem zařízení
-      a komunikují jen se servery, které si sami zadáte. Anonymní statistiky a hlášení chyb
+      a komunikují jen se servery, které si sami zadáte. Hodnoty z ovládacích widgetů odesíláte vy sami, jen na servery, které zvolíte, a provozovatel je nezískává. Anonymní statistiky a hlášení chyb
       (Firebase) se odesílají <strong>jen s vaším souhlasem</strong>. Aplikace zobrazuje reklamy
       (Google AdMob) a nabízí jednorázový nákup PRO verze přes Google Play.
     </div>
@@ -102,7 +103,7 @@
     <ul>
       <li>stažená měření a historie hodnot, poznámky a události,</li>
       <li>nastavení zdrojů dat, zařízení a veličin, přehledy a widgety, nastavení aplikace (jazyk, vzhled apod.),</li>
-      <li>API klíče a přihlašovací údaje ke zdrojům dat – ukládají se do zabezpečeného úložiště systému Android,</li>
+      <li>API klíče (včetně Write API Key pro odesílání dat) a přihlašovací údaje ke zdrojům dat – ukládají se do zabezpečeného úložiště systému Android,</li>
       <li>stav PRO verze (zda byl nákup dokončen) a pomocné počítadlo používání pro zobrazování reklam.</li>
     </ul>
     <p>
@@ -110,7 +111,7 @@
       Stará měření lze také automaticky mazat v Nastavení aplikace.
     </p>
 
-    <h2>3. Komunikace se zdroji dat, které si nastavíte</h2>
+    <h2>3. Komunikace se zdroji dat, které si nastavíte (čtení i odesílání)</h2>
     <p>
       Aplikace se připojuje přímo ze zařízení k serverům, které zadáte (např. ThingSpeak,
       vlastní REST API, MQTT broker). Tam se odesílají vámi zadané požadavky, případně API klíč nebo
@@ -122,6 +123,19 @@
       podporuje. Zda je spojení šifrované, závisí na adrese a nastavení serveru, který si zvolíte;
       u nešifrovaného spojení (HTTP) mohou být přenášené údaje včetně API klíče zachyceny na síti.
     </p>
+    <h3>Odesílání hodnot (ovládací widgety)</h3>
+    <p>
+      Ovládací widgety (posuvník, tlačítka, potenciometr, RGB barva) <strong>odešlou hodnotu jen tehdy, když to
+      sami vyvoláte</strong> (stisknutím tlačítka Odeslat). Odesílá se hodnota, kterou jste nastavili (číslo nebo text
+      tlačítka), a u ThingSpeaku také Write API Key – přímo ze zařízení na server, který jste zvolili
+      (ThingSpeak: api.thingspeak.com; MQTT: váš broker, do zadaného topicu). Provozovatel aplikace tato odesílaná data
+      <strong>nezískává, neukládá ani nezpracovává</strong> a nemá k nim přístup.
+    </p>
+    <ul>
+      <li>Write API Key a přihlašovací údaje jsou uložené jen v zabezpečeném úložišti zařízení a nejsou zapisovány do logů ani odesílány nikam jinam než na zvolený server.</li>
+      <li>Pokud odeslání selže (např. bez připojení), aplikace to oznámí a hodnotu <strong>neodkládá ani neodešle později</strong>; zopakovat ji můžete jen vy.</li>
+      <li>Za nastavení cílového serveru, odesílané hodnoty a následky ovládání odpovídáte vy. Aplikace <strong>není určena k ovládání bezpečnostně kritických zařízení</strong> a doručení příkazu nelze zaručit (síť, server, limity služby – např. bezplatný účet ThingSpeak povoluje zápis do kanálu nejvýše jednou za 15 s).</li>
+    </ul>
 
     <h2>4. Oznámení a kontrola alarmů na pozadí</h2>
     <p>
@@ -213,18 +227,18 @@
   <!-- ===================== ENGLISH ===================== -->
   <section id="en" lang="en">
     <h1>Privacy Policy: DataView – Sensor Dashboard</h1>
-    <p class="meta">Effective 27 October 2026 · DataView – Sensor Dashboard Android app (package ID <code>cz.palla.dataview</code>)</p>
+    <p class="meta">Effective 1 November 2026 · DataView – Sensor Dashboard Android app (package ID <code>cz.palla.dataview</code>)</p>
 
     <p>
       DataView – Sensor Dashboard is an app for viewing and storing time-series data (measurements) from services that
-      you configure yourself, such as ThingSpeak, other REST servers or MQTT brokers.
+      you configure yourself, such as ThingSpeak, other REST servers or MQTT brokers. Optionally, at your request, it can also send values to these services (control widgets).
       This policy explains what data the app processes, why, and what rights you have.
     </p>
 
     <div class="box">
       <strong>In short:</strong> your measurements, data source settings and access keys are
       <strong>not sent to any server of ours</strong> – we do not operate one. They stay on your device
-      and only communicate with the servers you enter yourself. Anonymous statistics and crash reports
+      and only communicate with the servers you enter yourself. Values from control widgets are sent by you, only to servers you choose, and the developer does not receive them. Anonymous statistics and crash reports
       (Firebase) are sent <strong>only with your consent</strong>. The app shows ads (Google AdMob)
       and offers a one-time PRO purchase through Google Play.
     </div>
@@ -240,7 +254,7 @@
     <ul>
       <li>downloaded measurements and value history, notes and events,</li>
       <li>data source, device and field settings, dashboards and widgets, app settings (language, theme, etc.),</li>
-      <li>API keys and credentials for your data sources – kept in Android's secure storage,</li>
+      <li>API keys (including the Write API Key used for sending data) and credentials for your data sources – kept in Android's secure storage,</li>
       <li>PRO status (whether the purchase was completed) and a usage counter used for showing ads.</li>
     </ul>
     <p>
@@ -248,7 +262,7 @@
       Old measurements can also be deleted automatically in the app's Settings.
     </p>
 
-    <h2>3. Communication with the data sources you configure</h2>
+    <h2>3. Communication with the data sources you configure (reading and sending)</h2>
     <p>
       The app connects directly from your device to the servers you enter (e.g. ThingSpeak, your own
       REST API, an MQTT broker). Requests you configure, and where applicable an API key or credentials,
@@ -261,6 +275,19 @@
       the server you choose; with an unencrypted connection (HTTP), transmitted data including an API key
       may be intercepted on the network.
     </p>
+    <h3>Sending values (control widgets)</h3>
+    <p>
+      Control widgets (slider, buttons, potentiometer, RGB colour) <strong>send a value only when you trigger it
+      yourself</strong> (by pressing Send). The value you set (a number or the text of a button) is sent – and, for
+      ThingSpeak, the Write API Key – directly from your device to the server you chose (ThingSpeak: api.thingspeak.com;
+      MQTT: your broker, to the topic you entered). The developer <strong>does not receive, store or process</strong>
+      this data and has no access to it.
+    </p>
+    <ul>
+      <li>The Write API Key and credentials are kept only in your device's secure storage and are never written to logs or sent anywhere other than the server you chose.</li>
+      <li>If sending fails (e.g. no connection), the app tells you and <strong>does not queue or resend the value later</strong>; only you can retry it.</li>
+      <li>You are responsible for the target server, the values you send and the consequences of controlling. The app is <strong>not intended for controlling safety-critical devices</strong> and delivery of a command cannot be guaranteed (network, server, service limits – e.g. a free ThingSpeak account allows writing to a channel at most once every 15 seconds).</li>
+    </ul>
 
     <h2>4. Notifications and background alarm checks</h2>
     <p>
