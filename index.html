@@ -76,7 +76,7 @@
   <!-- ===================== ČESKY ===================== -->
   <section id="cs" lang="cs">
     <h1>Zásady ochrany soukromí: DataView – Sensor Dashboard</h1>
-    <p class="meta">Platné od 1. 11. 2026 · Aplikace DataView – Sensor Dashboard pro Android (ID balíčku <code>cz.palla.dataview</code>)</p>
+    <p class="meta">Platné od 8. 11. 2026 · Aplikace DataView – Sensor Dashboard pro Android (ID balíčku <code>cz.palla.dataview</code>)</p>
 
     <p>
       DataView – Sensor Dashboard je aplikace pro zobrazování a ukládání časových dat (měření) ze služeb, které si
@@ -104,7 +104,7 @@
       <li>stažená měření a historie hodnot, poznámky a události,</li>
       <li>nastavení zdrojů dat, zařízení a veličin, přehledy a widgety, nastavení aplikace (jazyk, vzhled apod.),</li>
       <li>API klíče (včetně Write API Key pro odesílání dat) a přihlašovací údaje ke zdrojům dat – ukládají se do zabezpečeného úložiště systému Android,</li>
-      <li>stav PRO verze (zda byl nákup dokončen) a pomocné počítadlo používání pro zobrazování reklam.</li>
+      <li>stav PRO verze (zda byl nákup dokončen), pomocné počítadlo používání pro nabídku reklamy a příznak, zda jsou PRO prvky pozastavené.</li>
     </ul>
     <p>
       Odinstalováním aplikace nebo vymazáním jejích dat v systému Android se tyto údaje odstraní.
@@ -152,7 +152,7 @@
       přepínače v Nastavení; odvolání nemá vliv na zákonnost zpracování před odvoláním.
     </p>
     <table>
-      <tr><th>Co se zpracovává</th><td>Událost „spuštění / doba používání aplikace“, typy a počty widgetů, které máte na přehledech, přidání widgetu (typ), otevření detailu veličiny, dokončení reklamní brány, dokončení nákupu PRO.</td></tr>
+      <tr><th>Co se zpracovává</th><td>Událost „spuštění / doba používání aplikace“, typy a počty widgetů, které máte na přehledech, přidání widgetu (typ), otevření detailu veličiny, zhlédnutí odměněné reklamy, dokončení nákupu PRO.</td></tr>
       <tr><th>Technické údaje</th><td>Anonymní identifikátor instalace aplikace (Firebase App Instance ID), model zařízení, verze Androidu a aplikace, jazyk, přibližná lokalita (země/region) odvozená Googlem z IP adresy (samotná IP adresa se neukládá), u pádů záznam o chybě (výpis zásobníku volání).</td></tr>
       <tr><th>Co se NEODESÍLÁ</th><td>Naměřená data, názvy zdrojů a veličin, API klíče, přihlašovací údaje, e-mail, jméno ani přesná poloha.</td></tr>
       <tr><th>Účel</th><td>Zjistit, které funkce se používají a jak dlouho, a opravovat chyby a pády.</td></tr>
@@ -164,7 +164,8 @@
     <h2>6. Reklamy (Google AdMob)</h2>
     <p>
       Bezplatná verze aplikace zobrazuje odměněné reklamy společnosti Google (AdMob), které
-      po vyčerpání volného času používání umožní pokračovat. AdMob může zpracovávat
+      po vyčerpání volného času používání nabídnou odemknutí PRO prvků – reklama se pustí jen
+      po vašem výslovném klepnutí na „Zhlédnout reklamu“. AdMob může zpracovávat
       <strong>reklamní identifikátor zařízení</strong>, IP adresu, údaje o zařízení a interakci s reklamou
       a používat je k zobrazení a měření reklam. Pro uživatele v EHP, ve Spojeném království a ve Švýcarsku
       se při prvním spuštění zobrazí formulář souhlasu (Google UMP) a reklamy se řídí vaší volbou.
@@ -227,7 +228,7 @@
   <!-- ===================== ENGLISH ===================== -->
   <section id="en" lang="en">
     <h1>Privacy Policy: DataView – Sensor Dashboard</h1>
-    <p class="meta">Effective 1 November 2026 · DataView – Sensor Dashboard Android app (package ID <code>cz.palla.dataview</code>)</p>
+    <p class="meta">Effective 8 November 2026 · DataView – Sensor Dashboard Android app (package ID <code>cz.palla.dataview</code>)</p>
 
     <p>
       DataView – Sensor Dashboard is an app for viewing and storing time-series data (measurements) from services that
@@ -255,7 +256,7 @@
       <li>downloaded measurements and value history, notes and events,</li>
       <li>data source, device and field settings, dashboards and widgets, app settings (language, theme, etc.),</li>
       <li>API keys (including the Write API Key used for sending data) and credentials for your data sources – kept in Android's secure storage,</li>
-      <li>PRO status (whether the purchase was completed) and a usage counter used for showing ads.</li>
+      <li>PRO status (whether the purchase was completed), a usage counter used for the ad offer and a flag showing whether the PRO elements are paused.</li>
     </ul>
     <p>
       Uninstalling the app or clearing its data in Android removes this data.
@@ -304,7 +305,7 @@
       Settings; withdrawal does not affect the lawfulness of processing before withdrawal.
     </p>
     <table>
-      <tr><th>What is processed</th><td>App launch / usage-time events, types and counts of widgets on your dashboards, widget added (type), measurement detail opened, ad gate completed, PRO purchase completed.</td></tr>
+      <tr><th>What is processed</th><td>App launch / usage-time events, types and counts of widgets on your dashboards, widget added (type), measurement detail opened, rewarded ad watched, PRO purchase completed.</td></tr>
       <tr><th>Technical data</th><td>Anonymous app-installation identifier (Firebase App Instance ID), device model, Android and app version, language, approximate location (country/region) derived by Google from the IP address (the IP address itself is not stored); for crashes, an error report (stack trace).</td></tr>
       <tr><th>What is NOT sent</th><td>Measured data, names of sources and fields, API keys, credentials, e-mail, name or precise location.</td></tr>
       <tr><th>Purpose</th><td>To understand which features are used and for how long, and to fix bugs and crashes.</td></tr>
@@ -315,8 +316,9 @@
 
     <h2>6. Ads (Google AdMob)</h2>
     <p>
-      The free version of the app shows rewarded ads by Google (AdMob) that let you continue after your
-      free usage time is used up. AdMob may process the <strong>advertising ID</strong>, IP address,
+      The free version of the app shows rewarded ads by Google (AdMob) offered to unlock the PRO
+      elements after your free usage time is used up – an ad is played only after you explicitly tap
+      "Watch an ad". AdMob may process the <strong>advertising ID</strong>, IP address,
       device information and ad interaction to serve and measure ads. For users in the EEA, the
       United Kingdom and Switzerland, a consent form (Google UMP) is shown at first launch and ads follow
       your choice. You can change or withdraw your choice at any time in the app under Settings → Privacy →
